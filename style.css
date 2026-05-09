@@ -1,0 +1,46 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height to allow content to expand */
+    margin: 0;
+    background: linear-gradient(135deg, #e0f2f7, #b3e5fc); /* Softer gradient background */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px; /* Add some padding around the page */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white for a modern look */
+    padding: 50px 60px; /* More padding */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger, softer shadow */
+    max-width: 600px; /* Limit container width */
+    width: 100%; /* Ensure it takes full width up to max-width */
+}
+
+h1 {
+    color: #0277bd; /* A nice blue */
+    font-size: 2.8em; /* Larger heading */
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle text shadow */
+}
+
+p {
+    color: #555;
+    font-size: 1.2em; /* Larger paragraph text */
+    margin-bottom: 30px;
+}
+
+/* Optional: Add a subtle animation for a more dynamic feel */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeInUp 1s ease-out forwards;
+}
