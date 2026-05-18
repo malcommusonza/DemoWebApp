@@ -51,6 +51,23 @@
     color: #0277bd;
 }
 
+/* Login Button */
+.login-btn {
+    background: linear-gradient(135deg, #0277bd, #039be5);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 20px;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(2, 119, 189, 0.4);
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -103,6 +120,10 @@
 
     .nav-item {
         margin: 15px 0;
+    }
+
+    .login-btn {
+        margin: 15px 0 0 0;
     }
 }
 
