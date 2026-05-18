@@ -1,0 +1,14 @@
+[Unit]
+Description=DemoWebApp Auto-Deploy Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/demo-webapp
+ExecStart=/usr/bin/python3 -m http.server 60000
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
