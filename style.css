@@ -1,41 +1,150 @@
+/* Navigation Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0277bd;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0277bd;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: #333;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transition: 0.3s;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 15px 0;
+    }
+}
+
+/* Original body styles adjusted for navbar */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Use min-height to allow content to expand */
+    min-height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #e0f2f7, #b3e5fc); /* Softer gradient background */
+    background: linear-gradient(135deg, #e0f2f7, #b3e5fc);
     color: #333;
     line-height: 1.6;
-    padding: 20px; /* Add some padding around the page */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 80px;
 }
 
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white for a modern look */
-    padding: 50px 60px; /* More padding */
-    border-radius: 12px; /* More rounded corners */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger, softer shadow */
-    max-width: 600px; /* Limit container width */
-    width: 100%; /* Ensure it takes full width up to max-width */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 50px 60px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 100%;
 }
 
 h1 {
-    color: #0277bd; /* A nice blue */
-    font-size: 2.8em; /* Larger heading */
+    color: #0277bd;
+    font-size: 2.8em;
     margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle text shadow */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 p {
     color: #555;
-    font-size: 1.2em; /* Larger paragraph text */
+    font-size: 1.2em;
     margin-bottom: 30px;
 }
 
-/* Optional: Add a subtle animation for a more dynamic feel */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
