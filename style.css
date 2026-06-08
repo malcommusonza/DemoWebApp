@@ -1,0 +1,258 @@
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+header {
+    background: #0d47a1; /* Deep blue for header */
+    color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header a:hover {
+    color: #e3f2fd; /* Light blue on hover */
+}
+
+/* School Name Styling */
+.school-name {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.school-name:hover {
+    background-color: transparent;
+    color: #e3f2fd;
+}
+
+/* Hero Section */
+#hero {
+    background: url('hero-school.jpg'); /* Placeholder for a school hero image */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    margin-top: -15px; /* Overlap header slightly */
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 71, 161, 0.6); /* Deep blue overlay */
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 56px;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+}
+
+#hero p {
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+    margin-top: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4CAF50; /* Green accent for CTA */
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button:hover {
+    background-color: #45a049; /* Darker green */
+    transform: translateY(-3px);
+}
+
+/* Section Styling */
+main.container section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#about, #academics, #admissions, #contact {
+    background-color: #ffffff; /* White background for content sections */
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    color: #0d47a1; /* Deep blue for section titles */
+    margin-bottom: 25px;
+    font-size: 38px;
+}
+
+section p {
+    max-width: 800px;
+    margin: 15px auto;
+    font-size: 1.18em;
+    color: #555;
+    text-align: left;
+}
+
+/* Academics Programs */
+.academic-programs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.program {
+    background-color: #e3f2fd; /* Light blue for program cards */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+.program h3 {
+    color: #0d47a1; /* Deep blue for program titles */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.program p {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 0;
+}
+
+/* Contact Section Button Styling */
+#contact .cta-button {
+    background-color: #0d47a1; /* Deep blue for contact button */
+    color: #ffffff;
+}
+
+#contact .cta-button:hover {
+    background-color: #0a3a82; /* Darker blue */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+    #hero h1 {
+        font-size: 48px;
+    }
+    #hero p {
+        font-size: 22px;
+    }
+    section h2 {
+        font-size: 34px;
+    }
+    .academic-programs .program h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .school-name {
+        margin-bottom: 15px;
+    }
+    #hero {
+        padding: 80px 0;
+    }
+    #hero h1 {
+        font-size: 40px;
+    }
+    #hero p {
+        font-size: 20px;
+    }
+    section {
+        padding: 40px 0;
+    }
+    .academic-programs {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    background-color: #0d47a1; /* Deep blue footer */
+    color: #ffffff;
+    font-size: 0.95em;
+}
