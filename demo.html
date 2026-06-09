@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Page - Dev Team Orchestrator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #eaeaea;
+        }
+        .container {
+            text-align: center;
+            padding: 3rem;
+            max-width: 600px;
+        }
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #00d4ff, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .feature {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0,212,255,0.2);
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .feature-desc {
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(90deg, #00d4ff, #0099cc);
+            color: #0a0a1a;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 32px rgba(0,212,255,0.4);
+        }
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .footer a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🖥️</div>
+        <h1>Dev Team Orchestrator</h1>
+        <p class="subtitle">
+            AI-powered multi-agent development system with specialized subagents 
+            for development, debugging, review, DevOps, and documentation.
+        </p>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">👨‍💻</div>
+                <div class="feature-title">Development Agent</div>
+                <div class="feature-desc">Feature implementation, code generation, architecture</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🐛</div>
+                <div class="feature-title">Debugging Agent</div>
+                <div class="feature-desc">Root cause analysis, troubleshooting, performance</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔍</div>
+                <div class="feature-title">Review Agent</div>
+                <div class="feature-desc">Code review, security, standards compliance</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">☁️</div>
+                <div class="feature-title">DevOps Agent</div>
+                <div class="feature-desc">CI/CD, deployment, infrastructure, GitHub ops</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📚</div>
+                <div class="feature-title">Documentation Agent</div>
+                <div class="feature-desc">API docs, guides, architecture documentation</div>
+            </div>
+        </div>
+        
+        <button class="btn" onclick="alert('Demo button clicked!')">Launch Demo</button>
+        
+        <div class="footer">
+            <p>Built with <span style="color:#ff6b6b">♥</span> by the Dev Team Orchestrator</p>
+            <p><a href="https://github.com/malcommusonza/DemoWebApp" target="_blank">View on GitHub</a></p>
+        </div>
+    </div>
+    
+    <script>
+        console.log('Demo page loaded - Dev Team Orchestrator');
+        document.querySelector('.btn').addEventListener('click', () => {
+            console.log('Demo button activated');
+        });
+    </script>
+</body>
+</html>
